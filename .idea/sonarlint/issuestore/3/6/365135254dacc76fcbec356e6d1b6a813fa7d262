@@ -1,0 +1,23 @@
+
+xsquid:UselessImportCheck$"MRemove this unused import 'com.vintile.bingo.ui.main.game.GameArenaFragment'.(±–Îœ8Ž¼¢ž•.
+nsquid:CommentedOutCodeLineL"<This block of commented-out lines of code should be removed.(³°Óïþÿÿÿÿ8Ž¼¢ž•.
+psquid:UselessImportCheck"@Remove this unused import 'androidx.core.content.ContextCompat'.(üäÂùÿÿÿÿ8Ž¼¢ž•.
+Œsquid:S14500"iRemove the "mFirebaseDatabaseReference" field and declare it as a local variable in the relevant methods.(Ç²Ûæúÿÿÿÿ8Ž¼¢ž•.
+nsquid:CommentedOutCodeLineJ"<This block of commented-out lines of code should be removed.(Ë¼õÇýÿÿÿÿ8ÁûÁ •.
+Ysquid:UnusedPrivateMethod‰",Remove this unused private "signOut" method.(ìÉÓÌ8Ž¼¢ž•.
+gsquid:UselessImportCheck"7Remove this unused import 'android.widget.ProgressBar'.(³ñÿŸùÿÿÿÿ8Ž¼¢ž•.
+tsquid:UselessImportCheck""DRemove this unused import 'com.firebase.ui.database.SnapshotParser'.(ÈÉšÔùÿÿÿÿ8Ž¼¢ž•.
+^squid:UselessImportCheck".Remove this unused import 'android.view.View'.(Ø½­äþÿÿÿÿ8åµîù”.
+vsquid:UselessImportCheck"FRemove this unused import 'androidx.recyclerview.widget.RecyclerView'.(Îèòçøÿÿÿÿ8Ž¼¢ž•.
+Isquid:S00108˜")Either remove or fill this block of code.(å¥ž‡8Ž¼¢ž•.
+Osquid:S10682"1Remove this unused "mPostListener" private field.(±ÀÉ§8Ž¼¢ž•.
+dsquid:UselessImportCheck"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8Ž¼¢ž•.
+Ksquid:S1604u"(Make this anonymous inner class a lambda(¥íîŸÿÿÿÿÿ8Ž¼¢ž•.
+xsquid:UselessImportCheck"HRemove this unused import 'com.google.firebase.storage.FirebaseStorage'.(Ê¾ðíýÿÿÿÿ8Ž¼¢ž•.
+ysquid:UselessImportCheck"IRemove this unused import 'com.google.firebase.storage.StorageReference'.(é–ö†üÿÿÿÿ8Ž¼¢ž•.
+esquid:UselessImportCheck"5Remove this unused import 'android.widget.ImageView'.(ú¯ëàüÿÿÿÿ8Ž¼¢ž•.
+csquid:UselessImportCheck"8Remove this unused import 'android.view.LayoutInflater'.(À¯ÑÇ8Ž¼¢ž•.
+\squid:UselessImportCheck",Remove this unused import 'android.net.Uri'.(òêû‘ýÿÿÿÿ8Ž¼¢ž•.
+}squid:UselessImportCheck"MRemove this unused import 'com.firebase.ui.database.FirebaseRecyclerOptions'.(Á°â›þÿÿÿÿ8Ž¼¢ž•.
+nsquid:CommentedOutCodeLined"<This block of commented-out lines of code should be removed.(µ‚µõýÿÿÿÿ8Ž¼¢ž•.
+^squid:UselessImportCheck"3Remove this unused import 'android.view.ViewGroup'.(‹îá8Ž¼¢ž•.

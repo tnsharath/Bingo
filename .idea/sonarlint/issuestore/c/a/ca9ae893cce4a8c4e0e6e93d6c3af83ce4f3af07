@@ -1,0 +1,56 @@
+
+Ksquid:S1068+"-Remove this unused "viewModel" private field.(µí‚¥8„™åÏ”.
+Lsquid:S1068)")Remove this unused "box25" private field.(ıİÄ”ÿÿÿÿÿ8Ó¡Ï”.
+nsquid:S1301\"KReplace this "switch" statement by "if" statements to increase readability.(Ò“ÿšùÿÿÿÿ8º±Ï”.
+vsquid:S1450"SRemove the "box7" field and declare it as a local variable in the relevant methods.(œîó›ûÿÿÿÿ8Ë«¨Ï”.
+qsquid:S1450"SRemove the "box3" field and declare it as a local variable in the relevant methods.(êñ»Ú8ªâ§Ï”.
+wsquid:S1450)"TRemove the "box25" field and declare it as a local variable in the relevant methods.(ıİÄ”ÿÿÿÿÿ8ÆŒ­Ï”.
+Gsquid:S1068")Remove this unused "box14" private field.(é™“™8Ó¡Ï”.
+Gsquid:S1068")Remove this unused "box15" private field.(Û®ÂÆ8Ó¡Ï”.
+Fsquid:S1068 ")Remove this unused "box16" private field.(ÍÇïl8Ó¡Ï”.
+qsquid:S1450"SRemove the "box4" field and declare it as a local variable in the relevant methods.(ı£Ä¹8Ë«¨Ï”.
+Lsquid:S1068")Remove this unused "box13" private field.(ÕÙá§şÿÿÿÿ8Ó¡Ï”.
+Fsquid:S1185."(Remove this method to simply inherit it.(ßìê¯8¨¯˜Ï”.
+qsquid:S1450"SRemove the "box2" field and declare it as a local variable in the relevant methods.(É‹á8µÏ§Ï”.
+qsquid:S1450"SRemove the "box9" field and declare it as a local variable in the relevant methods.(èÁÎì8³õ«Ï”.
+Fsquid:S1068"(Remove this unused "box8" private field.(ãè¯à8Ó¡Ï”.
+\"squid:SwitchLastCaseIsDefaultCheck\""Add a default case to this switch.(Ò“ÿšùÿÿÿÿ8º±Ï”.
+Fsquid:S1068"(Remove this unused "box9" private field.(èÁÎì8Ó¡Ï”.
+Esquid:S1068"(Remove this unused "box5" private field.(ó™ä8Ó¡Ï”.
+qsquid:S1450"SRemove the "box6" field and declare it as a local variable in the relevant methods.(úˆ‡8Ë«¨Ï”.
+Lsquid:S1068"")Remove this unused "box18" private field.(Ö–íÔùÿÿÿÿ8Ó¡Ï”.
+wsquid:S1450'"TRemove the "box23" field and declare it as a local variable in the relevant methods.(³ÁÊ†üÿÿÿÿ8ÆŒ­Ï”.
+Lsquid:S1068!")Remove this unused "box17" private field.(ÒûæÅÿÿÿÿÿ8Ó¡Ï”.
+rsquid:S1450$"TRemove the "box20" field and declare it as a local variable in the relevant methods.(èŞ©Œ8îÄ¬Ï”.
+Fsquid:S1068"(Remove this unused "box1" private field.(”ÿã8•Ï”.
+Fsquid:S1068"(Remove this unused "box2" private field.(É‹á8Ó¡Ï”.
+wsquid:S1450""TRemove the "box18" field and declare it as a local variable in the relevant methods.(Ö–íÔùÿÿÿÿ8³õ«Ï”.
+Fsquid:S1068"(Remove this unused "box4" private field.(ı£Ä¹8Ó¡Ï”.
+Fsquid:S1068"(Remove this unused "box3" private field.(êñ»Ú8Ó¡Ï”.
+Ksquid:S1068"(Remove this unused "box7" private field.(œîó›ûÿÿÿÿ8Ó¡Ï”.
+qsquid:S1450 "TRemove the "box16" field and declare it as a local variable in the relevant methods.(ÍÇïl8³õ«Ï”.
+Gsquid:S1068(")Remove this unused "box24" private field.(ì¸ßå8Ó¡Ï”.
+rsquid:S1450%"TRemove the "box21" field and declare it as a local variable in the relevant methods.(¡Â8îÄ¬Ï”.
+wsquid:S1450"TRemove the "box11" field and declare it as a local variable in the relevant methods.(¤ı¿Òûÿÿÿÿ8³õ«Ï”.
+rsquid:S1450("TRemove the "box24" field and declare it as a local variable in the relevant methods.(ì¸ßå8ÆŒ­Ï”.
+Gsquid:S1068#")Remove this unused "box19" private field.(ß©õÎ8Ó¡Ï”.
+wsquid:S1450"TRemove the "box13" field and declare it as a local variable in the relevant methods.(ÕÙá§şÿÿÿÿ8³õ«Ï”.
+vsquid:S1450+"XRemove the "viewModel" field and declare it as a local variable in the relevant methods.(µí‚¥8»×ÖÏ”.
+Gsquid:S1068$")Remove this unused "box20" private field.(èŞ©Œ8Ó¡Ï”.
+rsquid:S1450#"TRemove the "box19" field and declare it as a local variable in the relevant methods.(ß©õÎ8³õ«Ï”.
+psquid:S1450"SRemove the "box5" field and declare it as a local variable in the relevant methods.(ó™ä8Ë«¨Ï”.
+wsquid:S1450"TRemove the "box12" field and declare it as a local variable in the relevant methods.(ÖÓâçøÿÿÿÿ8³õ«Ï”.
+rsquid:S1450&"TRemove the "box22" field and declare it as a local variable in the relevant methods.(÷é˜Û8îÄ¬Ï”.
+Gsquid:S1068%")Remove this unused "box21" private field.(¡Â8Ó¡Ï”.
+rsquid:S1450"TRemove the "box15" field and declare it as a local variable in the relevant methods.(Û®ÂÆ8³õ«Ï”.
+wsquid:S1450!"TRemove the "box17" field and declare it as a local variable in the relevant methods.(ÒûæÅÿÿÿÿÿ8³õ«Ï”.
+Gsquid:S1068&")Remove this unused "box22" private field.(÷é˜Û8Ó¡Ï”.
+Lsquid:S1068")Remove this unused "box11" private field.(¤ı¿Òûÿÿÿÿ8Ó¡Ï”.
+qsquid:S1450"SRemove the "box8" field and declare it as a local variable in the relevant methods.(ãè¯à8Ë«¨Ï”.
+qsquid:S1450"SRemove the "box1" field and declare it as a local variable in the relevant methods.(”ÿã8à·¥Ï”.
+Fsquid:S1068"(Remove this unused "box6" private field.(úˆ‡8Ó¡Ï”.
+Lsquid:S1068")Remove this unused "box12" private field.(ÖÓâçøÿÿÿÿ8Ó¡Ï”.
+Gsquid:S1068")Remove this unused "box10" private field.(õıµ8Ó¡Ï”.
+rsquid:S1450"TRemove the "box10" field and declare it as a local variable in the relevant methods.(õıµ8³õ«Ï”.
+rsquid:S1450"TRemove the "box14" field and declare it as a local variable in the relevant methods.(é™“™8³õ«Ï”.
+Lsquid:S1068'")Remove this unused "box23" private field.(³ÁÊ†üÿÿÿÿ8Ó¡Ï”.

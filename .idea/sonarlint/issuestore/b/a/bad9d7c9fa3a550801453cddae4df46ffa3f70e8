@@ -1,0 +1,8 @@
+
+ƒsquid:S1450,"`Remove the "tiEnterPlayerName" field and declare it as a local variable in the relevant methods.(ÊØò¾úÿÿÿÿ8ÀâË•.
+Xsquid:S1068,"5Remove this unused "tiEnterPlayerName" private field.(ÊØò¾úÿÿÿÿ8ûğª§•.
+ssquid:S1450'"WRemove the "rbCreate" field and declare it as a local variable in the relevant methods.(¤üßŒşÿÿÿÿ
+zsquid:S1450+"\Remove the "tiEnterRoomID" field and declare it as a local variable in the relevant methods.(¨²®œ8ÀâË•.
+qsquid:S1450'"URemove the "rbJoin" field and declare it as a local variable in the relevant methods.(¤üßŒşÿÿÿÿ
+@squid:S1659'"$Declare "rbJoin" on a separate line.(¤üßŒşÿÿÿÿ
+ssquid:S1450("\Remove the "btnCreateJoin" field and declare it as a local variable in the relevant methods.(É³ô

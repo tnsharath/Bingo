@@ -1,0 +1,7 @@
+
+…"squid:ClassVariableVisibilityCheck"PMake toss a static final constant or non-public and provide accessors if needed.(ˆ³Ò©8ã˜¬•.
+Msquid:EmptyStatementUsageCheck"Remove this empty statement.(ŞÕ‰ÿ8¢Òö¦•.
+Œ"squid:ClassVariableVisibilityCheck"RMake winner a static final constant or non-public and provide accessors if needed.(Ø„¾Åøÿÿÿÿ8âÏİŸ•.
+"squid:ClassVariableVisibilityCheck"SMake player1 a static final constant or non-public and provide accessors if needed.(õÚ»ïÿÿÿÿÿ8•ûÜŸ•.
+ˆ"squid:ClassVariableVisibilityCheck"SMake player2 a static final constant or non-public and provide accessors if needed.(ûÉ„Ä8Å³İŸ•.
+‹"squid:ClassVariableVisibilityCheck"QMake loser a static final constant or non-public and provide accessors if needed.(ÿ’ÿÿÿÿÿ8˜òİŸ•.
