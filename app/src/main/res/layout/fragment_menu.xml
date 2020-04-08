@@ -1,41 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/box_selected"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tiEnterPlayerName">
+        app:layout_constraintTop_toBottomOf="@+id/textView27">
 
         <RadioButton
             android:id="@+id/rbCreate"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create" />
+            android:layout_marginEnd="16dp"
+            android:text="@string/create" />
 
         <RadioButton
             android:id="@+id/rbJoin"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:checked="true"
-            android:text="Join" />
+            android:text="@string/join" />
     </RadioGroup>
 
     <Button
         android:id="@+id/btnCreateJoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/button_bg"
-        android:text="Join"
+        android:text="@string/join"
+        android:textColor="@color/colorLight"
         app:layout_constraintBottom_toBottomOf="@+id/tiEnterRoomID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tiEnterRoomID" />
@@ -44,34 +51,42 @@
         android:id="@+id/tiEnterRoomID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorLight"
         app:layout_constraintEnd_toStartOf="@+id/btnCreateJoin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+        app:layout_constraintTop_toBottomOf="@+id/tiEnterPlayerName">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEnterRoomID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Room ID"
-            android:inputType="number" />
+            android:background="@color/colorLight"
+            android:hint="@string/enter_room_id"
+            android:inputType="number"
+            android:padding="8dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tiEnterPlayerName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorLight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27">
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEnterPlayerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Name"
-            tools:layout_editor_absoluteX="-8dp"
-            tools:layout_editor_absoluteY="268dp" />
+            android:background="@color/colorLight"
+            android:hint="@string/enter_name"
+            android:padding="8dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,16 +96,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="8dp"
-        android:text="Bingo"
+        android:background="@drawable/box_selected"
         android:padding="16dp"
-        android:textColor="@color/colorRed"
+        android:text="@string/bingo"
+        android:textColor="@color/colorLight"
         android:textSize="32sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,27 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvPlayerName" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvB"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/box_selected"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/b"
+            android:textAlignment="center"
+            android:textColor="@color/colorLight" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvI"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/box_selected"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/i"
+            android:textAlignment="center"
+            android:textColor="@color/colorLight" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvN"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/box_selected"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/n"
+            android:textAlignment="center"
+            android:textColor="@color/colorLight" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvG"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/box_selected"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/g"
+            android:textAlignment="center"
+            android:textColor="@color/colorLight" />
+
+        <TextView
+            android:id="@+id/tvO"
+            android:visibility="gone"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/box_selected"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/o"
+            android:textAlignment="center"
+            android:textColor="@color/colorLight" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_opp_box"
+        app:layout_constraintEnd_toStartOf="@+id/rv_opp_box"
+        app:layout_constraintTop_toTopOf="@+id/rv_opp_box">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvoppB"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/opp_box"
+            android:gravity="center"
+            android:text="@string/b"
+            android:textAlignment="center"
+            android:textColor="@color/colorLight" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvoppI"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/opp_box"
+            android:gravity="center"
+            android:text="@string/i"
+            android:textAlignment="center"
+            android:textColor="@color/colorLight" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvoppN"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/opp_box"
+            android:gravity="center"
+            android:text="@string/n"
+            android:textAlignment="center"
+            android:textColor="@color/colorLight" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvoppG"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/opp_box"
+            android:gravity="center"
+            android:text="@string/g"
+            android:textAlignment="center"
+            android:textColor="@color/colorLight" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvoppO"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/opp_box"
+            android:gravity="center"
+            android:text="@string/o"
+            android:textAlignment="center"
+            android:textColor="@color/colorLight" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_opp_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,8 +175,37 @@
         android:id="@+id/tvOppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:text="Opponent"
-        app:layout_constraintEnd_toStartOf="@+id/rv_opp_box"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="8dp"
+        android:background="@drawable/green_gradient"
+        android:padding="4dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorLight"
+        app:layout_constraintEnd_toEndOf="@+id/rv_opp_box"
+        app:layout_constraintStart_toStartOf="@+id/rv_opp_box"
+        app:layout_constraintTop_toBottomOf="@+id/rv_opp_box" />
+
+    <TextView
+        android:id="@+id/tvPlayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/blue_gradient"
+        android:padding="4dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorLight"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_view"
+        app:layout_constraintStart_toStartOf="@+id/recycler_view"
+        app:layout_constraintTop_toBottomOf="@+id/tvTurn" />
+
+    <TextView
+        android:id="@+id/tvTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn"
+        android:textColor="@color/colorLight"
+        android:padding="8dp"
+        android:background="@drawable/red_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOppName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

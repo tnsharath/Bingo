@@ -68,7 +68,7 @@ public class PlayerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         public void bind(Feed feed) {
 
-            //TODO carefull
+
             if (!feed.isChecked()) {
                 title.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.line_diagonal));
             } else {

@@ -25,7 +25,7 @@ public class FeedViewModel extends ViewModel {
 
 
     private MediatorLiveData<List<Feed>> feed = new MediatorLiveData<>();
-    private  List<Feed> feeds = new ArrayList<>();
+    private List<Feed> feeds = new ArrayList<>();
     private int fillCount = 0;
 
     private final Repository repository;
@@ -34,65 +34,20 @@ public class FeedViewModel extends ViewModel {
     public FeedViewModel(Repository repository) {
         Log.d(TAG, "PostsViewModel: viewModel is working...");
         this.repository = repository;
-        initBox();
+     //   initBox();
     }
 
     private void initBox() {
-        Feed feed1 = new Feed(1, 0, false);
-        feeds.add(feed1);
-
-        Feed feed2 = new Feed(2, 0, false);
-        feeds.add(feed2);
-        Feed feed3 = new Feed(3, 0, false);
-        feeds.add(feed3);
-        Feed feed4 = new Feed(4, 0, false);
-        feeds.add(feed4);
-        Feed feed5 = new Feed(5, 0, false);
-        feeds.add(feed5);
-        Feed feed6 = new Feed(6, 0, false);
-        feeds.add(feed6);
-        Feed feed7 = new Feed(7, 0, false);
-        feeds.add(feed7);
-        Feed feed8 = new Feed(8, 0, false);
-        feeds.add(feed8);
-        Feed feed9 = new Feed(9, 0, false);
-        feeds.add(feed9);
-        Feed feed10 = new Feed(10, 0, false);
-        feeds.add(feed10);
-        Feed feed11 = new Feed(11, 0, false);
-        feeds.add(feed11);
-        Feed feed12 = new Feed(12, 0, false);
-        feeds.add(feed12);
-        Feed feed13 = new Feed(13, 0, false);
-        feeds.add(feed13);
-        Feed feed14 = new Feed(14, 0, false);
-        feeds.add(feed14);
-        Feed feed15 = new Feed(15, 0, false);
-        feeds.add(feed15);
-        Feed feed16 = new Feed(16, 0, false);
-        feeds.add(feed16);
-        Feed feed17 = new Feed(17, 0, false);
-        feeds.add(feed17);
-        Feed feed18 = new Feed(18, 0, false);
-        feeds.add(feed18);
-        Feed feed19 = new Feed(19, 0, false);
-        feeds.add(feed19);
-        Feed feed20 = new Feed(20, 0, false);
-        feeds.add(feed20);
-        Feed feed21 = new Feed(21, 0, false);
-        feeds.add(feed21);
-        Feed feed22= new Feed(22, 0, false);
-        feeds.add(feed22);
-        Feed feed23 = new Feed(23, 0, false);
-        feeds.add(feed23);
-        Feed feed24 = new Feed(24, 0, false);
-        feeds.add(feed24);
-        Feed feed25 = new Feed(25, 0, false);
-        feeds.add(feed25);
+        for (int i = 1; i <= 25; i++) {
+            Feed feed = new Feed(i, i, true);
+            feeds.add(feed);
+        }
+        //TODO remove fill count
+       // fillCount = 25;
         feed.setValue(feeds);
     }
 
-    LiveData<List<Feed>> getFeed(){
+    LiveData<List<Feed>> getFeed() {
         return feed;
     }
 
@@ -107,7 +62,7 @@ public class FeedViewModel extends ViewModel {
         Log.d(TAG, "testMethod: this is test");
     }
 
-    public void allClear(){
+    public void allClear() {
         feeds.clear();
         fillCount = 0;
         initBox();
@@ -117,11 +72,11 @@ public class FeedViewModel extends ViewModel {
         repository.insertBox(feeds);
     }
 
-    public LiveData<List<Feed>>  getBox(){
+    public LiveData<List<Feed>> getBox() {
         return repository.getBoxContent();
     }
 
-    public boolean isFilled(){
+    public boolean isFilled() {
         return fillCount >= 25;
     }
 }

@@ -1,6 +1,22 @@
 <resources>
     <string name="app_name">Bingo</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="o">O</string>
+    <string name="g">G</string>
+    <string name="n">N</string>
+    <string name="i">I</string>
+    <string name="b">B</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="waiting_for_opp_to_join">Waiting for opp to join...</string>
+    <string name="confirm">Confirm</string>
+    <string name="clear_all">Clear All</string>
+    <string name="room_id">Room ID</string>
+    <string name="fill_numbers_from_1_25_tap_on_box">Fill numbers from 1-25 (tap on box)</string>
+    <string name="bingo">Bingo</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_room_id">Enter Room ID</string>
+    <string name="join">Join</string>
+    <string name="join">Join</string>
+    <string name="create">Create</string>
 </resources>

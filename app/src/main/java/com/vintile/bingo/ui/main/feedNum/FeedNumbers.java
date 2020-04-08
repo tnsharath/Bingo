@@ -100,7 +100,7 @@ public class FeedNumbers extends DaggerFragment implements FeedAdapterInterface 
         btnConfirm.setEnabled(false);
         btnConfirm.setOnClickListener(v -> {
             viewModel.saveBox();
-            if (viewModel.isFilled()) {
+            if (viewModel.isFilled() && !tvPlayer1.getText().equals("Waiting for opp to join...")) {
                 startMatch();
             }
 
@@ -129,11 +129,8 @@ public class FeedNumbers extends DaggerFragment implements FeedAdapterInterface 
                         transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
                         transaction.commit();
                     } else {
-                        // for (DataSnapshot snapshot: dataSnapshot.getChildren()){
-                        //   match = snapshot.getValue(Match.class);
 
                         match = dataSnapshot.getValue(Match.class);
-                        //TODO Freeze button while also there is no player joined without listner
                         btnConfirm.setEnabled(true);
                         if (sharedPref.getKeyIsHost()) {
                             tvPlayer1.setText(match.getPlayer1());
@@ -154,9 +151,6 @@ public class FeedNumbers extends DaggerFragment implements FeedAdapterInterface 
 
 
                         }
-
-                        //   break;
-                        // }
                     }
                 } catch (Exception e) {
 

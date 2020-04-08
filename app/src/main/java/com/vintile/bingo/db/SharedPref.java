@@ -97,4 +97,13 @@ public class SharedPref {
     public boolean isMyTurn(){
         return pref.getBoolean(KEY_TURN, false);
     }
+
+    public void clear() {
+        setKeyRoomId("");
+        setKeyPlayerID("");
+        setKeyOppID("");
+        setKeyIsHost(false);
+        setKeyIsMyTurn(false);
+
+    }
 }

@@ -72,7 +72,11 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             } else {
                 title.setBackground(ContextCompat.getDrawable(view.getContext(), R.drawable.box_border));
             }
-            title.setText(String.valueOf(feed.getNumber()));
+            if (feed.getNumber() == 0) {
+                title.setText("");
+            } else {
+                title.setText(String.valueOf(feed.getNumber()));
+            }
 
             title.setOnClickListener(v ->
             {

@@ -4,6 +4,7 @@ import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 
@@ -29,6 +30,7 @@ public class GameViewModel extends ViewModel {
     private List<Feed> feeds = new ArrayList<>();
     private List<Feed> oppBoxes = new ArrayList<>();
     private Map<Integer, Integer> map = new HashMap<>();
+    private MutableLiveData<Integer> bingoCount = new MutableLiveData<>();
 
     private final Repository repository;
 
@@ -57,9 +59,6 @@ public class GameViewModel extends ViewModel {
         return oppBox;
     }
 
-    public LiveData<List<Feed>> getBox() {
-        return repository.getBoxContent();
-    }
 
     public void playerChecked(Feed update) {
         Feed newFeed = new Feed(update.getBoxID(), update.getNumber(), false);
@@ -70,8 +69,70 @@ public class GameViewModel extends ViewModel {
     public void updateFeed(List<Feed> updated) {
         feeds.clear();
         feeds = updated;
-        Log.e(TAG, "updateFeed: feed size "+ feeds.size());
-        Log.e(TAG, "updateFeed: update size "+ updated.size());
         feed.setValue(updated);
+        setPlayerBingoCount();
     }
+
+
+    public void setPlayerBingoCount(){
+        int box[] = new int[25];
+        int[] count = new int[12];
+        for (Feed feed: feeds){
+            if (!feed.isChecked()){
+                box[feed.getBoxID() - 1] = 1;
+            }else{
+                box[feed.getBoxID() - 1] = 0;
+            }
+        }
+
+
+        if (box[0] == 1 && box[1] == 1 && box[2] == 1 && box[3] == 1 && box[4] == 1){
+            count[1] = 1;
+        }
+
+        if (box[5] == 1 && box[6] == 1 && box[7] == 1 && box[8] == 1 && box[9] == 1){
+            count[2] = 1;
+        }
+        if (box[10] == 1 && box[11] == 1 && box[12] == 1 && box[13] == 1 && box[14] == 1){
+            count[3] = 1;
+        }
+        if (box[15] == 1 && box[16] == 1 && box[17] == 1 && box[18] == 1 && box[19] == 1){
+            count[4] = 1;
+        }
+        if (box[20] == 1 && box[21] == 1 && box[22] == 1 && box[23] == 1 && box[24] == 1){
+            count[5] = 1;
+        }
+        if (box[0] == 1 && box[5] == 1 && box[10] == 1 && box[15] == 1 && box[20] == 1){
+            count[6] = 1;
+        }
+        if (box[1] == 1 && box[6] == 1 && box[11] == 1 && box[16] == 1 && box[21] == 1){
+            count[7] = 1;
+        }
+        if (box[2] == 1 && box[7] == 1 && box[12] == 1 && box[17] == 1 && box[22] == 1){
+            count[8] = 1;
+        }
+        if (box[3] == 1 && box[8] == 1 && box[13] == 1 && box[18] == 1 && box[23] == 1){
+            count[9] = 1;
+        }
+        if (box[4] == 1 && box[9] == 1 && box[14] == 1 && box[19] == 1 && box[24] == 1){
+            count[10] = 1;
+        }
+
+        if (box[0] == 1 && box[6] == 1 && box[12] == 1 && box[18] == 1 && box[24] == 1){
+            count[11] = 1;
+        }
+        if (box[4] == 1 && box[8] == 1 && box[12] == 1 && box[16] == 1 && box[20] == 1){
+            count[0] = 1;
+        }
+        int sum = 0;
+        for (int i = 0; i < 12; i++){
+            sum +=count[i];
+        }
+        bingoCount.setValue(sum);
+    }
+
+    public LiveData<Integer> getPlayerBingoCount(){
+        return bingoCount;
+    }
+
 }
