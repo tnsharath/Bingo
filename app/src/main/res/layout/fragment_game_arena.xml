@@ -201,7 +201,7 @@
         android:id="@+id/tvTurn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Turn"
+        android:text="@string/turn"
         android:textColor="@color/colorLight"
         android:padding="8dp"
         android:background="@drawable/red_gradient"

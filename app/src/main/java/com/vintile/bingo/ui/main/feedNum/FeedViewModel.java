@@ -13,16 +13,12 @@ import com.vintile.bingo.model.Feed;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import javax.inject.Inject;
 
 /**
  * Created by Sharath on 2020/04/05
  **/
 public class FeedViewModel extends ViewModel {
-
-    private static final String TAG = "FeedViewModel";
-
 
     private MediatorLiveData<List<Feed>> feed = new MediatorLiveData<>();
     private List<Feed> feeds = new ArrayList<>();
@@ -32,18 +28,15 @@ public class FeedViewModel extends ViewModel {
 
     @Inject
     public FeedViewModel(Repository repository) {
-        Log.d(TAG, "PostsViewModel: viewModel is working...");
         this.repository = repository;
-     //   initBox();
+        initBox();
     }
 
     private void initBox() {
         for (int i = 1; i <= 25; i++) {
-            Feed feed = new Feed(i, i, true);
+            Feed feed = new Feed(i, 0, false);
             feeds.add(feed);
         }
-        //TODO remove fill count
-       // fillCount = 25;
         feed.setValue(feeds);
     }
 
@@ -58,9 +51,6 @@ public class FeedViewModel extends ViewModel {
         feed.setValue(feeds);
     }
 
-    public void testMethod() {
-        Log.d(TAG, "testMethod: this is test");
-    }
 
     public void allClear() {
         feeds.clear();
@@ -72,9 +62,7 @@ public class FeedViewModel extends ViewModel {
         repository.insertBox(feeds);
     }
 
-    public LiveData<List<Feed>> getBox() {
-        return repository.getBoxContent();
-    }
+
 
     public boolean isFilled() {
         return fillCount >= 25;

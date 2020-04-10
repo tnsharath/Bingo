@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel;
 import com.vintile.bingo.di.ViewModelKey;
 import com.vintile.bingo.ui.main.feedNum.FeedViewModel;
 import com.vintile.bingo.ui.main.game.GameViewModel;
-import com.vintile.bingo.util.GameAdapterInterface;
 
 import dagger.Binds;
 import dagger.Module;

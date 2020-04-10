@@ -74,8 +74,8 @@ public class GameViewModel extends ViewModel {
     }
 
 
-    public void setPlayerBingoCount(){
-        int box[] = new int[25];
+    private void setPlayerBingoCount(){
+        int[] box = new int[25];
         int[] count = new int[12];
         for (Feed feed: feeds){
             if (!feed.isChecked()){

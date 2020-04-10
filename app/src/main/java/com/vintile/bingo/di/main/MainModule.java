@@ -5,7 +5,6 @@ import android.app.Application;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.vintile.bingo.data.Repository;
-import com.vintile.bingo.db.AppDatabase;
 import com.vintile.bingo.ui.main.MainActivity;
 
 import dagger.Module;
@@ -25,12 +24,7 @@ public class MainModule {
 
 
     @Provides
-    static Repository providesRepository(Application application, AppDatabase appDatabase){
-        return new Repository(application, appDatabase);
-    }
-
-    @Provides
-    static AppDatabase providesDatabaseInstance(Application application){
-        return AppDatabase.getInstance(application);
+    static Repository providesRepository(Application application){
+        return new Repository(application);
     }
 }

@@ -1,6 +1,5 @@
 package com.vintile.bingo.ui.main.feedNum;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +22,6 @@ import java.util.List;
 public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<Feed> feeds = new ArrayList<>();
-    private static final String TAG = "FeedAdapter";
 
     private final FeedAdapterInterface feedAdapterInterface;
 

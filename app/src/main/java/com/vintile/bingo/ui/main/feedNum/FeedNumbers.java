@@ -45,18 +45,15 @@ public class FeedNumbers extends DaggerFragment implements FeedAdapterInterface 
 
     private FeedViewModel viewModel;
     private RecyclerView recyclerView;
-    private Button allCrear;
-    private ImageButton btnUndo;
     private Button btnConfirm;
 
-    private TextView tvRoomIDDisplay;
     private TextView tvPlayer1;
     private TextView tvPlayer2;
 
     @Inject
     ViewModelProviderFactory providerFactory;
 
-    FeedAdapter adapter;
+    private FeedAdapter adapter;
 
     @Inject
     GridLayoutManager gridLayoutManager;
@@ -65,7 +62,7 @@ public class FeedNumbers extends DaggerFragment implements FeedAdapterInterface 
     SharedPref sharedPref;
 
     private DatabaseReference mFirebaseDatabaseReference;
-    Match match = new Match();
+    private Match match = new Match();
 
 
     @Nullable
@@ -81,16 +78,16 @@ public class FeedNumbers extends DaggerFragment implements FeedAdapterInterface 
         tvPlayer1 = view.findViewById(R.id.tvPlayer1);
         tvPlayer2 = view.findViewById(R.id.tvPlayer2);
 
-        tvRoomIDDisplay = view.findViewById(R.id.tvRoomIDDisplay);
+        TextView tvRoomIDDisplay = view.findViewById(R.id.tvRoomIDDisplay);
 
-        allCrear = view.findViewById(R.id.btnCLearAll);
+        Button allCrear = view.findViewById(R.id.btnCLearAll);
         allCrear.setOnClickListener(v -> viewModel.allClear());
 
         tvRoomIDDisplay.setText(sharedPref.getRoomId());
 
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference().child(Constants.MATCH_CHILD).child(sharedPref.getRoomId());
 
-        btnUndo = view.findViewById(R.id.btnUndo);
+        ImageButton btnUndo = view.findViewById(R.id.btnUndo);
         btnUndo.setOnClickListener(v -> {
             //TODO undo
         });
@@ -100,7 +97,7 @@ public class FeedNumbers extends DaggerFragment implements FeedAdapterInterface 
         btnConfirm.setEnabled(false);
         btnConfirm.setOnClickListener(v -> {
             viewModel.saveBox();
-            if (viewModel.isFilled() && !tvPlayer1.getText().equals("Waiting for opp to join...")) {
+            if (viewModel.isFilled() && !tvPlayer1.getText().equals("Waiting for opp to join...") || !tvPlayer1.getText().equals("null")) {
                 startMatch();
             }
 
@@ -195,9 +192,6 @@ public class FeedNumbers extends DaggerFragment implements FeedAdapterInterface 
         viewModel.getFeed().observe(getViewLifecycleOwner(), feed -> {
             adapter.setFeeds(feed);
         });
-
-        viewModel.getBox().observe(getViewLifecycleOwner(), feeds ->
-                Log.d(TAG, "subscribeObserver: size" + feeds.size()));
     }
 
     @Override

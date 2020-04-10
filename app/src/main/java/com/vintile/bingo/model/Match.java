@@ -27,7 +27,7 @@ public class Match {
     }
 
     public Match( String player2) {
-        this.player2 = player2;;
+        this.player2 = player2;
     }
 
     public String getPlayer1() {

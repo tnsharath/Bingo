@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.vintile.bingo.R;
 import com.vintile.bingo.model.Feed;
-import com.vintile.bingo.util.FeedAdapterInterface;
 import com.vintile.bingo.util.GameAdapterInterface;
 
 import java.util.ArrayList;
@@ -23,12 +22,8 @@ import java.util.List;
 public class OppAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<Feed> feeds = new ArrayList<>();
-    private static final String TAG = "FeedAdapter";
-
-    private final GameAdapterInterface gameAdapterInterface;
 
     public OppAdapter(GameAdapterInterface gameAdapterInterface) {
-        this.gameAdapterInterface = gameAdapterInterface;
     }
 
     @NonNull

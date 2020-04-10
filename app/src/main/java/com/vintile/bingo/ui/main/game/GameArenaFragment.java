@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,7 +25,6 @@ import com.vintile.bingo.db.SharedPref;
 import com.vintile.bingo.model.Feed;
 import com.vintile.bingo.model.Match;
 import com.vintile.bingo.ui.main.MainActivity;
-import com.vintile.bingo.ui.main.feedNum.FeedNumbers;
 import com.vintile.bingo.util.Constants;
 import com.vintile.bingo.util.GameAdapterInterface;
 import com.vintile.bingo.util.VerticalSpacingItemDecoration;
@@ -46,8 +44,8 @@ public class GameArenaFragment extends DaggerFragment implements GameAdapterInte
 
     private static final String TAG = "GameArenaFragment";
 
-    private RecyclerView rv_player;
-    private RecyclerView rv_opp;
+    private RecyclerView rvPlayer;
+    private RecyclerView rvOpp;
 
     private GameViewModel viewModel;
 
@@ -63,23 +61,21 @@ public class GameArenaFragment extends DaggerFragment implements GameAdapterInte
 
     private DatabaseReference mFirebaseDatabaseReference;
 
-    boolean firstTurn = true;
-
     @Inject
     SharedPref sharedPref;
 
-    TextView tvTurn;
+    private TextView tvTurn;
 
-    TextView tvB;
-    TextView tvI;
-    TextView tvN;
-    TextView tvG;
-    TextView tvO;
-    TextView tvoppB;
-    TextView tvoppI;
-    TextView tvoppN;
-    TextView tvoppG;
-    TextView tvoppO;
+    private TextView tvB;
+    private TextView tvI;
+    private TextView tvN;
+    private TextView tvG;
+    private TextView tvO;
+    private TextView tvoppB;
+    private TextView tvoppI;
+    private TextView tvoppN;
+    private TextView tvoppG;
+    private TextView tvoppO;
 
 
     @Nullable
@@ -89,12 +85,12 @@ public class GameArenaFragment extends DaggerFragment implements GameAdapterInte
         return inflater.inflate(R.layout.fragment_game_arena, container, false);
     }
 
-    ViewGroup viewGroup;
+    private ViewGroup viewGroup;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        rv_player = view.findViewById(R.id.recycler_view);
-        rv_opp = view.findViewById(R.id.rv_opp_box);
+        rvPlayer = view.findViewById(R.id.recycler_view);
+        rvOpp = view.findViewById(R.id.rv_opp_box);
         tvTurn = view.findViewById(R.id.tvTurn);
 
         tvB = view.findViewById(R.id.tvB);
@@ -134,14 +130,14 @@ public class GameArenaFragment extends DaggerFragment implements GameAdapterInte
     private void initRecyclerView() {
         VerticalSpacingItemDecoration itemDecoration = new VerticalSpacingItemDecoration(0);
 
-        rv_player.setLayoutManager(gridLayoutManager);
-        rv_player.addItemDecoration(itemDecoration);
-        rv_player.setAdapter(playerAdapter);
+        rvPlayer.setLayoutManager(gridLayoutManager);
+        rvPlayer.addItemDecoration(itemDecoration);
+        rvPlayer.setAdapter(playerAdapter);
 
 
-        rv_opp.setLayoutManager(new GridLayoutManager(getContext(), 5));
-        rv_opp.addItemDecoration(itemDecoration);
-        rv_opp.setAdapter(oppAdapter);
+        rvOpp.setLayoutManager(new GridLayoutManager(getContext(), 5));
+        rvOpp.addItemDecoration(itemDecoration);
+        rvOpp.setAdapter(oppAdapter);
 
     }
 
@@ -227,7 +223,7 @@ public class GameArenaFragment extends DaggerFragment implements GameAdapterInte
     }
 
 
-    List<Feed> feedList;
+    private List<Feed> feedList;
 
     private void listenToChanges() {
 

@@ -36,12 +36,10 @@ import dagger.android.support.DaggerFragment;
 public class MenuFragment extends DaggerFragment {
 
     private RadioGroup radioGroup;
-    private RadioButton rbCreate, rbJoin;
     private Button btnCreateJoin;
     private TextInputEditText etEnterRoomID;
     private TextInputEditText etEnterPlayerName;
     private TextInputLayout tiEnterRoomID;
-    private TextInputLayout tiEnterPlayerName;
     private DatabaseReference mFirebaseDatabaseReference;
 
     @Inject
@@ -57,13 +55,12 @@ public class MenuFragment extends DaggerFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
         radioGroup = view.findViewById(R.id.radioGroup);
-        rbCreate = view.findViewById(R.id.rbCreate);
-        rbJoin = view.findViewById(R.id.rbJoin);
+        RadioButton rbCreate = view.findViewById(R.id.rbCreate);
+        RadioButton rbJoin = view.findViewById(R.id.rbJoin);
         btnCreateJoin = view.findViewById(R.id.btnCreateJoin);
         etEnterRoomID = view.findViewById(R.id.etEnterRoomID);
         etEnterPlayerName = view.findViewById(R.id.etEnterPlayerName);
         tiEnterRoomID = view.findViewById(R.id.tiEnterRoomID);
-        tiEnterPlayerName = view.findViewById(R.id.tiEnterPlayerName);
 
         if (!sharedPref.getPlayerName().equals("Me")) {
             etEnterPlayerName.setText(sharedPref.getPlayerName());
